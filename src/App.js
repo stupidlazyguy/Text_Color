@@ -4,12 +4,15 @@ import Clock from './Components/Clock'
 import ClockAuto from './Components/ClockAuto'
 // LIFE CYCLE TEST
 function App() {
-  const [Show,setShow] = useState(1)
+  const [Show,setShow] = useState(true)
+  const [Time,setTime] = useState([1,2,3,4])
   return (
     <div className="container">
       <Clock/>
-      {Show === 1 ? <ClockAuto/> : null }
-      <button className="btn btn-success" onClick={()=>setShow(0)}>Stop The Time</button>
+      {Show ? <ClockAuto/> : null }
+      {Show ?  <button className="btn btn-success" onClick={()=>setShow(false)}>Stop The Time</button> : ""}
+      {!Show ? <button className="btn btn-success" onClick={()=>setShow(true)}>Stop The Time</button> : ""}
+     
     </div>
   )
 }
