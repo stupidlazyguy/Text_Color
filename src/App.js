@@ -1,23 +1,10 @@
 import React from 'react';
 import './App.css';
-
+import Refs from './Components/Refs'
 function App() {
   return (
     <div className="container">
-      <div className="row">
-        <div className="col-6 col-xl-6 header" >
-
-      </div>
-        <div className="col-6 col-xl-6 header " >
-
-      </div>
-        <div class="col-12 col-xl-12 result">
-          <button class="btn btn-success btn-lg button-result">
-                  Result <span class="badge badge-primary"></span>
-          </button>
-      </div>
-    </div>
-
+      <Refs> This is children of props Hello </Refs>
     </div>
   )
 }
