@@ -4,21 +4,26 @@ import './App.css';
 function App() {
   return (
     <div className="container">
-      <div className="row">
+      <div className="row container-fulid">
         <div className="col-6 col-xl-6 header" >
+        </div>
 
-      </div>
         <div className="col-6 col-xl-6 header " >
+        </div>
 
-      </div>
-        <div class="col-12 col-xl-12 result">
-          <button class="btn btn-success btn-lg button-result">
-                  Result <span class="badge badge-primary"></span>
-          </button>
+        <div className="col-12 col-xl-12 row result" >
+          <div className="col-10 col-xl-10">
+
+          </div>
+          <div className="col-2 col-xl-2 d-flex ">
+            <button className="button btn btn-lg">
+              Result
+            </button>
+          </div>
+        </div>
       </div>
     </div>
-
-    </div>
+    
   )
 }
 
