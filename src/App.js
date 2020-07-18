@@ -1,30 +1,25 @@
 import React from 'react';
 import './App.css';
-
-function App() {
-  return (
-    <div className="container">
-      <div className="row container-fulid">
-        <div className="col-6 col-xl-6 header" >
+import BoxLeft from './Components/BoxLeft'
+import BoxRight from './Components/BoxRight'
+import ButtonResult from './Components/ButtonResult'
+import ResultSpace from './Components/ResultSpace'
+class App extends React.Component{
+  render(){
+    return (
+      <div className="container">
+        <h1>Text Color</h1>
+        <div className="row">
+          <BoxLeft/>
+          <BoxRight/>
         </div>
-
-        <div className="col-6 col-xl-6 header " >
-        </div>
-
-        <div className="col-12 col-xl-12 row result" >
-          <div className="col-10 col-xl-10">
-
-          </div>
-          <div className="col-2 col-xl-2 d-flex ">
-            <button className="button btn btn-lg">
-              Result
-            </button>
-          </div>
+        <div className="row box_result d-flex border border-primary ">
+          <ResultSpace/>
+          <ButtonResult/>
         </div>
       </div>
-    </div>
-    
-  )
+    )
+  }
 }
 
 export default App;
