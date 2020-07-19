@@ -4,8 +4,8 @@ class Box_Left extends React.Component{
     // constructor(props){
     //     super(props)
     // }
-    getBoxColor(color){
-        console.log(color)
+    getBoxColor=(color)=>{
+        this.props.getColor(color)
     }
     renderColor(){
         var colors = this.props.colors

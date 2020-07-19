@@ -8,11 +8,14 @@ class App extends React.Component{
   constructor(){
     super()
     this.state = {color:['blue','red','yellow','green','orange','white','pink','black']}
-    this.state.color.push('magenta')
-    // console.log(this.state)
+    this.state.pick='color'
+    this.state.size=15
   }
-  ongetColor(color){
-        console.log(color)
+  ongetColor=(color)=>{
+     this.setState({pick:color})
+  }
+  ongetSize=(size)=>{
+    this.setState({size:size})
   }
   render(){
     return (
@@ -20,10 +23,10 @@ class App extends React.Component{
         <h1>Text Color</h1>
         <div className="row">
           <BoxLeft colors={this.state.color} getColor={this.ongetColor}/>
-          <BoxRight colors={this.state.color }/>
+          <BoxRight colors={this.state.color} getSize={this.ongetSize}/>
         </div>
         <div className="row box_result d-flex border border-primary ">
-          <ResultSpace/>
+          <ResultSpace color={this.state.pick} size={this.state.size}/>
           <ButtonResult/>
         </div>
       </div>
