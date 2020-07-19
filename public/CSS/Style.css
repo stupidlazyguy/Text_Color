@@ -1,3 +1,7 @@
+*{
+    margin:0px;
+    padding:0px;
+}
 .header{
     background-color: aqua;
     height:300px;
@@ -9,14 +13,25 @@
     height: 100px;
     border:1px double black;
 }
-
-.button-result{
-    position:absolute;
-    right:0;
-    margin: 20px;
+.button{
+    margin: auto;
 }
-.button-result:active{
-    position:absolute;
-    right:0;
-    margin-top:22px;
+
+.box_result{
+    height:100px;
+}
+
+.Box-Color{
+    height:50px;
+    width:50px;
+    background-color: blue;
+    margin:10px;
+    border:1px solid yellow;
+}
+.Box-Color:active{
+    width:50px;
+    height: 50px;
+    background-color: blue;
+    margin:10px;
+    border:1px solid red;
 }
